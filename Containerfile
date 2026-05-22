@@ -3,7 +3,8 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+#FROM registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+FROM registry.gitlab.com/origami-linux/images/origami:latest
 RUN sed -i 's/^ID=.*/ID=fedora/' /etc/os-release
 
 ## Other possible base images include:
